@@ -13,7 +13,13 @@ install(DIRECTORY
   urdf
   launch
   meshes 
-  DESTINATION share/${PROJECT_NAME})
+  DESTINATION share/${PROJECT_NAME}
+)
+
+install(PROGRAMS
+  headbob_dance.py
+  DESTINATION lib/${PROJECT_NAME}
+)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

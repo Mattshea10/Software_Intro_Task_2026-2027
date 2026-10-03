@@ -8,7 +8,7 @@ import math
 class HeadbobDance(Node):
     def __init__(self):
         super().__init__('headbob_dance')
-        self.publisher_ = self.create_publisher(JointState, '/joint_states', 10)
+        self.publisher_ = self.create_publisher(JointState, '/dance_commands', 10)
 
         timer_period = 0.033
         self.timer = self.create_timer(timer_period, self.timer_callback)

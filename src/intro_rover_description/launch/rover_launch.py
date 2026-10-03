@@ -15,9 +15,10 @@ def generate_launch_description():
             parameters=[{'robot_description': open(urdf_path).read()}]
         ),
         Node(
-            package='joint_state_publisher_gui',
-            executable='joint_state_publisher_gui',
-            name='joint_state_publisher_gui'
+            package='joint_state_publisher',
+            executable='joint_state_publisher',
+            name='joint_state_publisher',
+            parameters=[{'source_list': ['/dance_commands']}]
         ),
         Node(
             package='rviz2',

@@ -1,0 +1,17 @@
+[0.012s] Invoking command in '/home/Software_Intro_Task_2026-2027/build/intro_rover_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/Software_Intro_Task_2026-2027/build/intro_rover_description -- -j12 -l12
+[0.035s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.242s] -- Found urdf: 2.10.1 (/opt/ros/jazzy/share/urdf/cmake)
+[0.348s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[0.353s] [31mCMake Error at CMakeLists.txt:12 (install):
+[0.353s]   install DIRECTORY given unknown argument "DIRECTORY".
+[0.353s] 
+[0.354s] [0m
+[0.354s] -- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[0.443s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.443s] -- Configured 'flake8' exclude dirs and/or files: 
+[0.444s] -- Added test 'lint_cmake' to check CMake code style
+[0.444s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.445s] -- Added test 'xmllint' to check XML markup files
+[0.446s] -- Configuring incomplete, errors occurred!
+[0.450s] gmake: *** [Makefile:226: cmake_check_build_system] Error 1
+[0.452s] Invoked command in '/home/Software_Intro_Task_2026-2027/build/intro_rover_description' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/Software_Intro_Task_2026-2027/build/intro_rover_description -- -j12 -l12

@@ -1,0 +1,22 @@
+[0.015s] Invoking command in '/home/Software_Intro_Task_2026-2027/build/intro_rover_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/Software_Intro_Task_2026-2027/build/intro_rover_description -- -j12 -l12
+[0.048s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.021s] [31mCMake Error at CMakeLists.txt:12 (find_package):
+[1.021s]   By not providing "Find<dependency>.cmake" in CMAKE_MODULE_PATH this project
+[1.022s]   has asked CMake to find a package configuration file provided by
+[1.022s]   "<dependency>", but CMake did not find one.
+[1.022s] 
+[1.022s]   Could not find a package configuration file provided by "<dependency>" with
+[1.022s]   any of the following names:
+[1.022s] 
+[1.022s]     <dependency>Config.cmake
+[1.022s]     <dependency>-config.cmake
+[1.022s] 
+[1.022s]   Add the installation prefix of "<dependency>" to CMAKE_PREFIX_PATH or set
+[1.022s]   "<dependency>_DIR" to a directory containing one of the above files.  If
+[1.022s]   "<dependency>" provides a separate development package or SDK, be sure it
+[1.022s]   has been installed.
+[1.022s] 
+[1.022s] [0m
+[1.022s] -- Configuring incomplete, errors occurred!
+[1.024s] gmake: *** [Makefile:226: cmake_check_build_system] Error 1
+[1.026s] Invoked command in '/home/Software_Intro_Task_2026-2027/build/intro_rover_description' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/Software_Intro_Task_2026-2027/build/intro_rover_description -- -j12 -l12

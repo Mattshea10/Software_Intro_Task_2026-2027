@@ -51,6 +51,13 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/intro_rover_description" TYPE PROGRAM FILES
+    "/home/Software_Intro_Task_2026-2027/src/intro_rover_description/headbob_dance.py"
+    "/home/Software_Intro_Task_2026-2027/src/intro_rover_description/joint_commands.py"
+    )
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/Software_Intro_Task_2026-2027/build/intro_rover_description/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/intro_rover_description")
 endif()
 

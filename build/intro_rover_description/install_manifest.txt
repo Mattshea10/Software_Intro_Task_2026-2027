@@ -1,5 +1,7 @@
 /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/intro_rover_description/urdf/intro_rover_description.urdf
+/home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/intro_rover_description/launch/__pycache__/gazebo_launch.cpython-312.pyc
 /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/intro_rover_description/launch/rover_launch.py
+/home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/intro_rover_description/launch/gazebo_launch.py
 /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/intro_rover_description/meshes/wrist_pitch_link.STL
 /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/intro_rover_description/meshes/fr_wheel_link.STL
 /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/intro_rover_description/meshes/fl_swerve_yaw_link.STL
@@ -15,6 +17,8 @@
 /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/intro_rover_description/meshes/shoulder_yaw_link.STL
 /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/intro_rover_description/meshes/elbow_roll_link.STL
 /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/intro_rover_description/meshes/fr_swerve_yaw_link.STL
+/home/Software_Intro_Task_2026-2027/install/intro_rover_description/lib/intro_rover_description/headbob_dance.py
+/home/Software_Intro_Task_2026-2027/install/intro_rover_description/lib/intro_rover_description/joint_commands.py
 /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/ament_index/resource_index/package_run_dependencies/intro_rover_description
 /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/ament_index/resource_index/parent_prefix_path/intro_rover_description
 /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/intro_rover_description/environment/ament_prefix_path.sh

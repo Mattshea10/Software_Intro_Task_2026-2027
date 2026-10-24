@@ -1,0 +1,57 @@
+[0.017s] Invoking command in '/home/Software_Intro_Task_2026-2027/build/intro_rover_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/Software_Intro_Task_2026-2027/build/intro_rover_description -- -j12 -l12
+[0.092s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.658s] -- Found urdf: 2.10.1 (/opt/ros/jazzy/share/urdf/cmake)
+[1.017s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[1.048s] -- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[1.220s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.220s] -- Configured 'flake8' exclude dirs and/or files: 
+[1.221s] -- Added test 'lint_cmake' to check CMake code style
+[1.222s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.226s] -- Added test 'xmllint' to check XML markup files
+[1.234s] -- Configuring done (1.2s)
+[1.248s] -- Generating done (0.0s)
+[1.248s] -- Build files have been written to: /home/Software_Intro_Task_2026-2027/build/intro_rover_description
+[1.292s] Invoked command in '/home/Software_Intro_Task_2026-2027/build/intro_rover_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/Software_Intro_Task_2026-2027/build/intro_rover_description -- -j12 -l12
+[1.307s] Invoking command in '/home/Software_Intro_Task_2026-2027/build/intro_rover_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/Software_Intro_Task_2026-2027/build/intro_rover_description
+[1.332s] -- Install configuration: ""
+[1.332s] -- Up-to-date: /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/intro_rover_description/urdf
+[1.333s] -- Installing: /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/intro_rover_description/urdf/intro_rover_description.urdf
+[1.333s] -- Up-to-date: /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/intro_rover_description/launch
+[1.334s] -- Up-to-date: /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/intro_rover_description/launch/__pycache__
+[1.334s] -- Installing: /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/intro_rover_description/launch/__pycache__/gazebo_launch.cpython-312.pyc
+[1.334s] -- Up-to-date: /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/intro_rover_description/launch/rover_launch.py
+[1.334s] -- Installing: /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/intro_rover_description/launch/gazebo_launch.py
+[1.335s] -- Up-to-date: /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/intro_rover_description/meshes
+[1.335s] -- Up-to-date: /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/intro_rover_description/meshes/wrist_pitch_link.STL
+[1.335s] -- Up-to-date: /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/intro_rover_description/meshes/fr_wheel_link.STL
+[1.335s] -- Up-to-date: /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/intro_rover_description/meshes/fl_swerve_yaw_link.STL
+[1.336s] -- Up-to-date: /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/intro_rover_description/meshes/br_swerve_yaw_link.STL
+[1.336s] -- Up-to-date: /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/intro_rover_description/meshes/br_wheel_link.STL
+[1.336s] -- Up-to-date: /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/intro_rover_description/meshes/elbow_pitch_link.STL
+[1.336s] -- Up-to-date: /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/intro_rover_description/meshes/wrist_roll_link.STL
+[1.336s] -- Up-to-date: /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/intro_rover_description/meshes/fl_wheel_link.STL
+[1.336s] -- Up-to-date: /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/intro_rover_description/meshes/base_link.STL
+[1.348s] -- Up-to-date: /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/intro_rover_description/meshes/bl_wheel_link.STL
+[1.348s] -- Up-to-date: /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/intro_rover_description/meshes/shoulder_pitch_link.STL
+[1.348s] -- Up-to-date: /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/intro_rover_description/meshes/bl_swerve_yaw_link.STL
+[1.348s] -- Up-to-date: /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/intro_rover_description/meshes/shoulder_yaw_link.STL
+[1.349s] -- Up-to-date: /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/intro_rover_description/meshes/elbow_roll_link.STL
+[1.349s] -- Up-to-date: /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/intro_rover_description/meshes/fr_swerve_yaw_link.STL
+[1.349s] -- Installing: /home/Software_Intro_Task_2026-2027/install/intro_rover_description/lib/intro_rover_description/headbob_dance.py
+[1.349s] -- Installing: /home/Software_Intro_Task_2026-2027/install/intro_rover_description/lib/intro_rover_description/joint_commands.py
+[1.349s] -- Installing: /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/ament_index/resource_index/package_run_dependencies/intro_rover_description
+[1.350s] -- Installing: /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/ament_index/resource_index/parent_prefix_path/intro_rover_description
+[1.350s] -- Up-to-date: /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/intro_rover_description/environment/ament_prefix_path.sh
+[1.350s] -- Up-to-date: /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/intro_rover_description/environment/ament_prefix_path.dsv
+[1.350s] -- Up-to-date: /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/intro_rover_description/environment/path.sh
+[1.350s] -- Up-to-date: /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/intro_rover_description/environment/path.dsv
+[1.351s] -- Up-to-date: /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/intro_rover_description/local_setup.bash
+[1.351s] -- Up-to-date: /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/intro_rover_description/local_setup.sh
+[1.351s] -- Up-to-date: /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/intro_rover_description/local_setup.zsh
+[1.351s] -- Up-to-date: /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/intro_rover_description/local_setup.dsv
+[1.351s] -- Installing: /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/intro_rover_description/package.dsv
+[1.356s] -- Up-to-date: /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/ament_index/resource_index/packages/intro_rover_description
+[1.356s] -- Up-to-date: /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/intro_rover_description/cmake/intro_rover_descriptionConfig.cmake
+[1.356s] -- Up-to-date: /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/intro_rover_description/cmake/intro_rover_descriptionConfig-version.cmake
+[1.357s] -- Installing: /home/Software_Intro_Task_2026-2027/install/intro_rover_description/share/intro_rover_description/package.xml
+[1.376s] Invoked command in '/home/Software_Intro_Task_2026-2027/build/intro_rover_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/Software_Intro_Task_2026-2027/build/intro_rover_description

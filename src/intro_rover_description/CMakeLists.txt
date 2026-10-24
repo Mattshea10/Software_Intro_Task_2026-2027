@@ -18,6 +18,7 @@ install(DIRECTORY
 
 install(PROGRAMS
   headbob_dance.py
+  joint_commands.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

@@ -2,38 +2,46 @@
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import JointState
-import math
 
-
-class HeadbobDance(Node):
+class JointCommands(Node):
     def __init__(self):
-        super().__init__('headbob_dance')
-        self.publisher_ = self.create_publisher(JointState, '/dance_commands', 10)
+        # Node names should not contain spaces
+        super().__init__('joint_commands_node')
+        self.publisher_ = self.create_publisher(JointState, '/joint_commands', 10)
 
-        timer_period = 0.033
-        self.timer = self.create_timer(timer_period, self.timer_callback)
-        self.counter = 0.0
+    def command_loop(self):
+        # This loop takes over the main thread to constantly ask for inputs
+        while True:
+            joint_name = input("Joint Name: ")
+            
+            # Catch errors if the user types a letter instead of a number
+            try:
+                angle = float(input('Angle (in radians): '))
+            except ValueError:
+                print("Please enter a valid numeric angle.")
+                continue
 
-    def timer_callback(self):
-        self.counter += 0.05
+            msg = JointState()
+            msg.header.stamp = self.get_clock().now().to_msg()
+            msg.name = [joint_name]
+            msg.position = [angle]
 
-        angle = math.sin(self.counter)
-
-        msg = JointState()
-        msg.header.stamp = self.get_clock().now().to_msg()
-        msg.name = ['wrist_pitch']
-        msg.position = [angle]
-
-        # 4. Publish message
-        self.publisher_.publish(msg)
+            self.publisher_.publish(msg)
+            print(f"--> Published {angle} rad to {joint_name}\n")
 
 def main(args=None):
     rclpy.init(args=args)
-    node = HeadbobDance()
-    rclpy.spin(node)
+    node = JointCommands()
+    
+    try:
+        # Run your custom loop instead of rclpy.spin()
+        node.command_loop()
+    except KeyboardInterrupt:
+        # Allows you to exit cleanly using Ctrl+C
+        pass
+        
     node.destroy_node()
     rclpy.shutdown()
-
 
 if __name__ == '__main__':
     main()

@@ -18,7 +18,7 @@ def generate_launch_description():
             package='joint_state_publisher',
             executable='joint_state_publisher',
             name='joint_state_publisher',
-            parameters=[{'source_list': ['/dance_commands']}]
+            parameters=[{'source_list': ['/joint_commands']}]
         ),
         Node(
             package='rviz2',

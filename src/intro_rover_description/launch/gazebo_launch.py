@@ -1,7 +1,7 @@
 import os
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import AppendEnvironmentVariable, IncludeLaunchDescription
+from launch.actions import AppendEnvironmentVariable, IncludeLaunchDescription, SetEnvironmentVariable
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node
 
@@ -19,11 +19,20 @@ def generate_launch_description():
             f'file://{pkg_intro_rover}'
         )
 
+    # On WSL2, use X11 (xcb) backend for reliable Gazebo GUI window management
+    wsl_env_actions = []
+    if 'WSL_DISTRO_NAME' in os.environ:
+        wsl_env_actions = [
+            SetEnvironmentVariable(name='QT_QPA_PLATFORM', value='xcb'),
+        ]
+
+    # Add the workspace share directory to Gazebo's resource path for mesh resolution
     set_gz_resource_path = AppendEnvironmentVariable(
         name='GZ_SIM_RESOURCE_PATH',
         value=os.path.dirname(pkg_intro_rover)
     )
 
+    # Publish the URDF to /robot_description using simulation clock
     robot_state_publisher = Node(
         package='robot_state_publisher',
         executable='robot_state_publisher',
@@ -35,6 +44,7 @@ def generate_launch_description():
         }],
     )
 
+    # Launch Gazebo Harmonic with an empty world (-r starts simulation running immediately)
     gz_sim = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(pkg_ros_gz_sim, 'launch', 'gz_sim.launch.py')
@@ -42,6 +52,7 @@ def generate_launch_description():
         launch_arguments={'gz_args': '-r empty.sdf'}.items(),
     )
 
+    # Spawn the rover entity in Gazebo from the /robot_description topic
     spawn_rover = Node(
         package='ros_gz_sim',
         executable='create',
@@ -55,6 +66,8 @@ def generate_launch_description():
         output='screen',
     )
 
+    # Bridge ROS 2 Float64 joint command topics to Gazebo Double messages
+    # for all 14 joints controlled by JointPositionController plugins
     ros_gz_bridge = Node(
         package='ros_gz_bridge',
         executable='parameter_bridge',
@@ -77,7 +90,7 @@ def generate_launch_description():
         output='screen',
     )
 
-    return LaunchDescription([
+    return LaunchDescription(wsl_env_actions + [
         set_gz_resource_path,
         robot_state_publisher,
         gz_sim,

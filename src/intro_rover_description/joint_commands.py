@@ -24,6 +24,8 @@ JOINT_LIMITS = {
 
 
 class JointCommands(Node):
+    """Interactive CLI node for sending target joint angles (in radians) to RViz and Gazebo."""
+
     def __init__(self):
         super().__init__('joint_commands_node')
         # Publishers for Gazebo Harmonic (std_msgs/msg/Float64 per joint topic)
@@ -35,13 +37,16 @@ class JointCommands(Node):
         self.rviz_publisher_ = self.create_publisher(JointState, '/joint_commands', 10)
 
     def command_loop(self):
+        """Continuously prompt the user for a joint name and target radian angle."""
         print(f"Available joints:\n  {', '.join(JOINT_LIMITS.keys())}\n")
         while rclpy.ok():
+            # Read and normalize joint name input
             joint_name = input("Joint Name: ").strip().lstrip('/')
             if joint_name not in self.gz_publishers_:
                 print(f"Unknown joint '{joint_name}'. Valid joints: {', '.join(JOINT_LIMITS.keys())}\n")
                 continue
 
+            # Prompt for target angle and validate numeric input
             limits = JOINT_LIMITS[joint_name]
             limit_str = f" [{limits[0]} to {limits[1]} rad]" if limits else " [continuous, in radians]"
             try:
@@ -50,6 +55,7 @@ class JointCommands(Node):
                 print("Please enter a valid numeric angle.\n")
                 continue
 
+            # Clamp revolute joints to their physical URDF limits if exceeded
             if limits is not None and (angle < limits[0] or angle > limits[1]):
                 clamped = max(limits[0], min(limits[1], angle))
                 print(f"Warning: {angle} rad exceeds limits {limits} for '{joint_name}'. Clamping to {clamped} rad.")

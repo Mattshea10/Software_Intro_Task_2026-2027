@@ -9,6 +9,8 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(urdf REQUIRED)
 
+# Install URDF robot description, launch files, and 3D STL meshes
+# to the package share directory so ROS 2 and Gazebo can locate them
 install(DIRECTORY 
   urdf
   launch
@@ -16,6 +18,7 @@ install(DIRECTORY
   DESTINATION share/${PROJECT_NAME}
 )
 
+# Install Python control scripts as executable ROS 2 nodes
 install(PROGRAMS
   headbob_dance.py
   joint_commands.py

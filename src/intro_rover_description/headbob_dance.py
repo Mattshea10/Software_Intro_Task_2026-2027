@@ -7,6 +7,8 @@ from std_msgs.msg import Float64
 
 
 class HeadbobDance(Node):
+    """Automated control node that oscillates wrist_pitch and shoulder_yaw in a sinusoidal dance."""
+
     def __init__(self):
         super().__init__('headbob_dance')
         # Publishers for Gazebo Harmonic (std_msgs/msg/Float64 per joint topic)
@@ -16,11 +18,13 @@ class HeadbobDance(Node):
         # Publisher for RViz joint_state_publisher source_list (sensor_msgs/msg/JointState)
         self.joint_state_pub = self.create_publisher(JointState, '/joint_commands', 10)
 
+        # Run timer callback at ~30 Hz for smooth joint trajectories
         timer_period = 0.033  # ~30 Hz
         self.timer = self.create_timer(timer_period, self.timer_callback)
         self.counter = 0.0
 
     def timer_callback(self):
+        # Advance phase counter and compute sinusoidal target angles (in radians)
         self.counter += 0.05
 
         wrist_angle = math.sin(self.counter)
@@ -55,6 +59,4 @@ def main(args=None):
 
 
 if __name__ == '__main__':
-    main()
-
     main()
